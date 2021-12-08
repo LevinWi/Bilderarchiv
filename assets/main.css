@@ -1,0 +1,35 @@
+body {
+    background-color: #eee;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: clamp(1rem, 10vw, 10rem);
+}
+
+.grid-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 100%;
+}
+
+.large {
+    width: 100%;
+}
+
+.medium {
+    width: 75%
+}
+
+.small {
+    width: 50%;
+}
