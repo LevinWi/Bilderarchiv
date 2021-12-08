@@ -3,10 +3,18 @@
       <Frontpage/>
       <h1>This site is the index</h1>
       <div class="grid-list">
-        <figure v-for="item, index in images" :key="index" :class="item.size">
+        <div class="column1">
+          <figure v-for="item, index in images" :key="index" :class="item.size">
           <img :src="`/pics/${item.path}`" alt="">
-          <p>{{item.size}}, {{item.hasChildren}}</p>
-        </figure>
+          <p class="image-text-c1">{{item.size}}, {{item.hasChildren}}</p>
+          </figure>
+        </div>
+        <div class="column2">
+          <figure v-for="item, index in images" :key="index" :class="item.size">
+          <img :src="`/pics/${item.path}`" alt="">
+          <p class="image-text-c2">{{item.size}}, {{item.hasChildren}}</p>
+          </figure>
+        </div>
       </div>
     </div>
 </template>
