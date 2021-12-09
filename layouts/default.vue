@@ -3,7 +3,7 @@
         <Nav/>
         <nuxt/>
         <Footer/>
-        <!-- <div id="mouseBall" class="pointer"></div> -->
+        <div id="mouseBall" class="pointer"></div>
          <svg version="1.1" id="cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
             <path class="black" d="M0,0v1080h1920V0H0z M960,596c-30.9,0-56-25.1-56-56s25.1-56,56-56s56,25.1,56,56S990.9,596,960,596z"/>
         </svg>        
@@ -35,8 +35,8 @@ export default {
             this.updateMouseBallPos();
         },
         updateMouseBallPos(){
-            // document.getElementById('mouseBall').style.left = this.x + "px"
-            // document.getElementById('mouseBall').style.top = this.y + "px"
+            document.getElementById('mouseBall').style.left = this.x + "px"
+            document.getElementById('mouseBall').style.top = this.y + "px"
             document.getElementById('cover').style.left = this.x + "px"
             document.getElementById('cover').style.top = this.y + "px"
             
@@ -59,18 +59,19 @@ export default {
         pointer-events: none;
         content: "";
         z-index: 999;
-        width: 10rem;
-        height: 10rem;
+        width: 290px;
+        height: 290px;
         position: absolute;
         border-radius: 100%;
         left: -10rem;
         top: -10rem;
         transform: translate(-50%, -50%);
-        background:#fff;
+        background:rgb(225, 255, 255);
         mix-blend-mode: difference;
     } 
     .black {
-        background-color: #000;
+        /* background-color: rgba(0,0,0,0.5); */
+        opacity: 0.9;
     }
     #cover{
         position: absolute;
@@ -80,6 +81,8 @@ export default {
         width: 300vw;
         height: 300vh;
         pointer-events: none;
+        z-index: 100;
+        overflow: hidden;
     }
     a:hover>#cover{
         transform: scale(1.2) ;

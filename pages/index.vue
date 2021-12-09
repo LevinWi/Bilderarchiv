@@ -1,7 +1,6 @@
 <template>
     <div class="wrapper">
       <Frontpage/>
-      <h1>This site is the index</h1>
       <div class="grid-list">
         <div class="column1">
           <figure v-for="item, index in images" :key="index" :class="item.size">
