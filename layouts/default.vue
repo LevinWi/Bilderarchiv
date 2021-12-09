@@ -4,6 +4,9 @@
         <nuxt/>
         <Footer/>
         <div id="mouseBall" class="pointer"></div>
+        <!--   <svg version="1.1" id="cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <path class="black" d="M0,0v1080h1920V0H0z M960,596c-30.9,0-56-25.1-56-56s25.1-56,56-56s56,25.1,56,56S990.9,596,960,596z"/>
+        </svg>         -->
     </main>
 </template>
 
@@ -33,6 +36,8 @@ export default {
         updateMouseBallPos(){
             document.getElementById('mouseBall').style.left = this.x + "px"
             document.getElementById('mouseBall').style.top = this.y + "px"
+            // document.getElementById('cover').style.left = this.x + "px"
+            // document.getElementById('cover').style.top = this.y + "px"
             
             //this.$refs.mouseBall.style.left = this.x + "px"
             //this.$refs.mouseBall.style.top = this.y + "px"
@@ -62,5 +67,19 @@ export default {
         transform: translate(-50%, -50%);
         background:#fff;
         mix-blend-mode: difference;
+    }
+    .black {
+        background-color: #000;
+    }
+    #cover{
+        position: fixed;
+        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 </style>
