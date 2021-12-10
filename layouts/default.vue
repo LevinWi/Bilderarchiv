@@ -6,9 +6,9 @@
         <div id="mouseBall" class="pointer"></div>
         <svg version="1.1" id="cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
             <path class="black" d="M0,0v1080h1920V0H0z M960,596c-30.9,0-56-25.1-56-56s25.1-56,56-56s56,25.1,56,56S990.9,596,960,596z"/>
-            <!-- <path class="black" d="M0,0v1080h1920V0H0z M960,694.87c-85.53,0-154.87-69.34-154.87-154.87S874.47,385.13,960,385.13s154.87,69.34,154.87,154.87
-            S1045.53,694.87,960,694.87z"/>
-            <circle class="st0" cx="960" cy="540" r="154.87"/> -->
+            <!-- <path class=""d="M0,0v1080h1920V0H0z M960,611.85c-39.68,0-71.85-32.17-71.85-71.85s32.17-71.85,71.85-71.85s71.85,32.17,71.85,71.85
+	        S999.68,611.85,960,611.85z"/>
+            <circle id="mouseBall" class="pointer" cx="960" cy="540" r="71.85"/> -->
         </svg>        
     </main>
 </template>
@@ -28,7 +28,6 @@ export default {
     methods: {
         handleScrollMousemove(event){
             this.y = document.documentElement.scrollTop + this.mouseScrollOffset;
-            console.log(this.mouseScrollOffset)
             this.updateMouseBallPos();
         },
         handleMousemove(event){            
@@ -73,7 +72,7 @@ export default {
     } 
     .black {
         /* background-color: rgba(0,0,0,0.5); */
-        opacity: 0.9;
+        opacity: 0.5;
     }
     #cover{
         position: absolute;
