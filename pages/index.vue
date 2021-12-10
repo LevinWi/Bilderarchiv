@@ -10,8 +10,9 @@
               @mouseleave="hoveredElement=null"
               :src="`/pics/${item.path}`" alt="">
             <p class="image-text-c1" v-if="hoveredElement===`left_${index}`">
-              {{item.size}}, {{item.hasChildren}}
+              Etiam a vestibulum erat. Sed pharetra odio id magna auctor, non scelerisque felis ornare. Etiam nec mi vehicula, pellentesque ex id, laoreet eros. Donec pulvinar purus tortor, nec posuere nunc egestas nec. Mauris sit amet felis eu neque aliquam mattis. Vestibulum sit amet dictum dui. Pellentesque eu dolor ex. Donec.
             </p>
+            
           </figure>
         </div>
 
@@ -23,6 +24,7 @@
               :src="`/pics/${item.path}`" alt="">
             <p class="image-text-c2" v-if="hoveredElement===`right_${index}`">
               {{item.size}}, {{item.hasChildren}}
+              Etiam a vestibulum erat. Sed pharetra odio id magna auctor, non scelerisque felis ornare. Etiam nec mi vehicula, pellentesque ex id, laoreet eros. Donec pulvinar purus tortor, nec posuere nunc egestas nec. Mauris sit amet felis eu neque aliquam mattis. Vestibulum sit amet dictum dui. Pellentesque eu dolor ex. Donec.
             </p>
           </figure>
         </div>

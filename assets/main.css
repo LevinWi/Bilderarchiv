@@ -12,11 +12,6 @@ a {
     cursor: none;
 }
 
-.image-text-c1, .image-text-c2{
-    font-size: 3rem;
-    z-index: 300;
-    pointer-events: none;
-}
 .grid-list {
     display: flex;
     flex-direction: row;
@@ -38,10 +33,10 @@ figure {
     display: flex;
     /* margin-bottom: 2rem; */
     width: 100%;
+    position: relative;
 }
 
 figure img {
-    display: flex;
     border: 1rem #000 solid;
     max-width: auto;
     width: 100%;
@@ -49,16 +44,21 @@ figure img {
     filter: invert(1);
 }
 
+.image-text-c1, .image-text-c2{
+    font-size: 1rem;
+    z-index: 300;
+    pointer-events: none;
+    position: absolute;
+    color: white;
+    width: 40vw;
+}
+
 .image-text-c1{
-    color: red;
-    position: relative;
-    top: 10%;
-    left: 10%
+    top: 30%;
+    left: 110%
 }
 
 .image-text-c2{
-    color: greenyellow;
-    position: relative;
-    top: 10%;
-    left: -160%
+    top: 30%;
+    left: -90%
 }
