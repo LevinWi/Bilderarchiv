@@ -12,15 +12,10 @@ a {
     cursor: none;
 }
 
-p {
+.image-text-c1, .image-text-c2{
+    font-size: 3rem;
     z-index: 300;
     pointer-events: none;
-}
-
-p {
-    font-size: 3rem;
-    /* color: white; */
-    font-style: oblique;
 }
 .grid-list {
     display: flex;

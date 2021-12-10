@@ -17,8 +17,13 @@
 
         <div class="column2">
           <figure v-for="item, index in images" :key="index" :class="item.size">
-          <img :src="`/pics/${item.path}`" alt="">
-          <p class="image-text-c2">{{item.size}}, {{item.hasChildren}}</p>
+            <img 
+              @mouseover= "handleMouseEnter(`right_${index}`)"
+              @mouseleave="hoveredElement=null"
+              :src="`/pics/${item.path}`" alt="">
+            <p class="image-text-c2" v-if="hoveredElement===`right_${index}`">
+              {{item.size}}, {{item.hasChildren}}
+            </p>
           </figure>
         </div>
 
@@ -40,7 +45,6 @@ export default {
   methods: {
     handleMouseEnter(index){
       this.hoveredElement=index
-      console.log(index)
     }
     }
   
