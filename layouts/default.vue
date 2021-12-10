@@ -4,8 +4,11 @@
         <nuxt/>
         <Footer/>
         <div id="mouseBall" class="pointer"></div>
-         <svg version="1.1" id="cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+        <svg version="1.1" id="cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
             <path class="black" d="M0,0v1080h1920V0H0z M960,596c-30.9,0-56-25.1-56-56s25.1-56,56-56s56,25.1,56,56S990.9,596,960,596z"/>
+            <!-- <path class="black" d="M0,0v1080h1920V0H0z M960,694.87c-85.53,0-154.87-69.34-154.87-154.87S874.47,385.13,960,385.13s154.87,69.34,154.87,154.87
+            S1045.53,694.87,960,694.87z"/>
+            <circle class="st0" cx="960" cy="540" r="154.87"/> -->
         </svg>        
     </main>
 </template>
@@ -57,14 +60,13 @@ export default {
     }
     .pointer {
         pointer-events: none;
-        content: "";
         z-index: 999;
-        width: 290px;
-        height: 290px;
+        width: 15.3vw;
+        height: 15.3vw;
         position: absolute;
         border-radius: 100%;
-        left: -10rem;
-        top: -10rem;
+        left: 50vw;
+        top: 50vh;
         transform: translate(-50%, -50%);
         background:rgb(225, 255, 255);
         mix-blend-mode: difference;

@@ -4,27 +4,24 @@
       <div class="grid-list">
 
         <div class="column1">
-          <figure v-for="item, index in images" :key="index" :class="item.size">
+          <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
             <img 
-              @mouseover= "handleMouseEnter(`left_${index}`)"
+              v-if="item.PhotoId%2==0"
+              @mouseover= "handleMouseEnter(`left_${PhotoId}`)"
               @mouseleave="hoveredElement=null"
-              :src="`/pics/${item.path}`" alt="">
-            <p class="image-text-c1" v-if="hoveredElement===`left_${index}`">
-              Etiam a vestibulum erat. Sed pharetra odio id magna auctor, non scelerisque felis ornare. Etiam nec mi vehicula, pellentesque ex id, laoreet eros. Donec pulvinar purus tortor, nec posuere nunc egestas nec. Mauris sit amet felis eu neque aliquam mattis. Vestibulum sit amet dictum dui. Pellentesque eu dolor ex. Donec.
+              :src="item.Link" :alt="item.AltText">
+            <p class="image-text-c1" v-if="hoveredElement===`left_${PhotoId}`">
+              Titel: {{item.TextTitle}} <br> {{item.Description}}
             </p>
             
           </figure>
         </div>
 
         <div class="column2">
-          <figure v-for="item, index in images" :key="index" :class="item.size">
-            <img 
-              @mouseover= "handleMouseEnter(`right_${index}`)"
-              @mouseleave="hoveredElement=null"
-              :src="`/pics/${item.path}`" alt="">
-            <p class="image-text-c2" v-if="hoveredElement===`right_${index}`">
-              {{item.size}}, {{item.hasChildren}}
-              Etiam a vestibulum erat. Sed pharetra odio id magna auctor, non scelerisque felis ornare. Etiam nec mi vehicula, pellentesque ex id, laoreet eros. Donec pulvinar purus tortor, nec posuere nunc egestas nec. Mauris sit amet felis eu neque aliquam mattis. Vestibulum sit amet dictum dui. Pellentesque eu dolor ex. Donec.
+          <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
+            <img v-if="item.PhotoId%2==1" @mouseover= "handleMouseEnter(`right_${PhotoId}`)" @mouseleave="hoveredElement=null" :src="item.Link" :alt="item.AltText">
+            <p class="image-text-c2" v-if="hoveredElement===`right_${PhotoId}`">
+               Titel: {{item.TextTitle}} <br> {{item.Description}}
             </p>
           </figure>
         </div>
@@ -34,21 +31,28 @@
 </template>
 
 <script>
-const DBimages = require('~/assets/data/images.json')
+// const DBimages = require('~/assets/data/images.json')
+
 export default {
   data() {
     return {
       title: 'my things',
-      images: DBimages,
+      images: [],
       color: '',
       hoveredElement: false,
     }
+  }, 
+  async created() {
+    const DBimages = await this.$axios.get('https://webex-groupc.azurewebsites.net/api/Photo')
+    
+    this.images = DBimages.data
+    console.log(DBimages.data[1].Link)
   },
   methods: {
     handleMouseEnter(index){
       this.hoveredElement=index
     }
-    }
+  }
   
 }
 </script>
