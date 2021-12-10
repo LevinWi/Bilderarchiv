@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper">
       <Frontpage/>
+      <img class="BG-img" :src="`/pics/stadtmuseum_aarau.png`" alt="">
       <div class="grid-list">
         <div class="column1">
           <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
@@ -53,3 +54,12 @@ export default {
   
 }
 </script>
+
+<style>
+  .BG-img {
+    width: 80vw;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+  }
+</style>

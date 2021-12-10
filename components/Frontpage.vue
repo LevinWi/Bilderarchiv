@@ -8,14 +8,12 @@
                 <span class="line"></span>
                 <span class="line"></span>
             </label>
-            </div>
+        </div>
 
-            <img class= "img2" :src="`/pics/stadtmuseum_aarau.png`">
-
-            <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
+        <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
             Suche die Bilder in dem du mit der Lupe über die Seite fährst.</p>
 
-            <div class="scrollsign"></div>
+        <div class="scrollsign"></div>
     </div>
 </template>
 
@@ -25,30 +23,22 @@
     width: 100vw;
     position: relative;
     z-index: 300;
-    background-color: rgb(22, 10, 3);
-}
-
-.background {
-    background-color: black;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .img {
-    height: 6.5vh;
-    margin: 1.5% 0 0 3%;
-}
-
-.img2 {
-    height: 50vh;
-    margin: 10% 0 0 10%;
+    width: 6rem;
 }
 
 p {
-font-family: Arial, Helvetica, sans-serif;
-color: white;
-margin: -10% 20% -50% 52%;
-font-size: 20px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    top: 40vh;
+    left: 60vw;
+    width: 30vw;
+    font-size: 20px;
 }
-
 
 label.hamburg { 
    display: block;
@@ -60,7 +50,9 @@ label.hamburg {
    border-radius: 4px; 
 }
 
-input#hamburg {display:none}
+input#hamburg {
+    display:none
+}
 
 .line { 
    position: absolute; 
@@ -72,8 +64,12 @@ input#hamburg {display:none}
    transform-origin: center; 
 }
 
-.line:nth-child(1) { top: 12px; }
-.line:nth-child(2) { top: 24px; } 
+.line:nth-child(1) { 
+    top: 12px; 
+}
+.line:nth-child(2) {
+     top: 24px; 
+} 
 
 #hamburg:checked + .hamburg .line:nth-child(1){
    transform: translateY(12px) rotate(-45deg);
@@ -83,11 +79,12 @@ input#hamburg {display:none}
     transform: translateY(-0px) rotate(45deg);
 }
 
-
 .scrollsign { 
-  border-left: 1.5px solid white;
-  height: 40px; width: 6px;
-  margin-left: 50%;
-  margin-top: 59%;
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+    border-left: 1.5px solid white;
+    height: 40px; 
+    width: 6px;
 }
 </style>

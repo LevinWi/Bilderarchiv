@@ -3,12 +3,15 @@
         
         <nuxt/>
         <Footer/>
-        <div id="mouseBall" class="pointer"></div>
+        <!-- <div id="mouseBall" class="pointer"></div> -->
+        <!-- <svg id="mouseBall" class="pointerCover" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	    viewBox="0 0 1920 1080" xml:space="preserve">
+            <circle class="pointer" cx="960" cy="540" r="71.85"/>
+        </svg>   -->
         <svg version="1.1" id="cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
-            <path class="black" d="M0,0v1080h1920V0H0z M960,596c-30.9,0-56-25.1-56-56s25.1-56,56-56s56,25.1,56,56S990.9,596,960,596z"/>
-            <!-- <path class=""d="M0,0v1080h1920V0H0z M960,611.85c-39.68,0-71.85-32.17-71.85-71.85s32.17-71.85,71.85-71.85s71.85,32.17,71.85,71.85
+            <!-- <path class="black" d="M0,0v1080h1920V0H0z M960,596c-30.9,0-56-25.1-56-56s25.1-56,56-56s56,25.1,56,56S990.9,596,960,596z"/> -->
+            <path class="black" d="M0,0v1080h1920V0H0z M960,611.85c-39.68,0-71.85-32.17-71.85-71.85s32.17-71.85,71.85-71.85s71.85,32.17,71.85,71.85
 	        S999.68,611.85,960,611.85z"/>
-            <circle id="mouseBall" class="pointer" cx="960" cy="540" r="71.85"/> -->
         </svg>        
     </main>
 </template>
@@ -37,8 +40,8 @@ export default {
             this.updateMouseBallPos();
         },
         updateMouseBallPos(){
-            document.getElementById('mouseBall').style.left = this.x + "px"
-            document.getElementById('mouseBall').style.top = this.y + "px"
+            // document.getElementById('mouseBall').style.left = this.x + "px"
+            // document.getElementById('mouseBall').style.top = this.y + "px"
             document.getElementById('cover').style.left = this.x + "px"
             document.getElementById('cover').style.top = this.y + "px"
             
@@ -59,21 +62,26 @@ export default {
     }
     .pointer {
         pointer-events: none;
-        z-index: 999;
-        width: 15.3vw;
-        height: 15.3vw;
-        position: absolute;
-        border-radius: 100%;
-        left: 50vw;
-        top: 50vh;
-        transform: translate(-50%, -50%);
-        background:rgb(225, 255, 255);
-        mix-blend-mode: difference;
+        background:rgb(225, 255, 255)!important;
+        mix-blend-mode: difference!important;
     } 
+    .pointerCover{
+        pointer-events: none;
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300vw;
+        height: 300vh;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
     .black {
         /* background-color: rgba(0,0,0,0.5); */
-        opacity: 0.5;
+        opacity: 0.9;
     }
+
     #cover{
         position: absolute;
         transform: translate(-50%, -50%);
@@ -82,9 +90,10 @@ export default {
         width: 300vw;
         height: 300vh;
         pointer-events: none;
-        z-index: 100;
+        z-index: 200;
         overflow: hidden;
     }
+
     a:hover>#cover{
         transform: scale(1.2) ;
     }
