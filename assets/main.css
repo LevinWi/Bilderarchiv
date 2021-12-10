@@ -45,7 +45,7 @@ figure {
     width: 100%;
 }
 
-img {
+figure img {
     display: flex;
     border: 1rem #000 solid;
     max-width: auto;

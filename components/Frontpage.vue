@@ -1,37 +1,34 @@
 <template>
     <div class="frontpage">
-        <img class= "img" src="~/assets/frontpageimg/logo-stadtmuseum.svg">
+        <img class= "img" :src="`/pics/logo-stadtmuseum.svg`">
 
-   <div class="row">
-    <input type="checkbox" id="hamburg">
-    <label for="hamburg" class="hamburg">
-        <span class="line"></span>
-        <span class="line"></span>
-    </label>
-    </div>
+        <div class="row">
+            <input type="checkbox" id="hamburg">
+            <label for="hamburg" class="hamburg">
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+            </div>
 
-    <img class= "img2" src="~/assets/frontpage/stadtmuseum_aarau.png">
+            <img class= "img2" :src="`/pics/stadtmuseum_aarau.png`">
 
-    <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
-    Suche die Bilder in dem du mit der Lupe über die Seite fährst.</p>
+            <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
+            Suche die Bilder in dem du mit der Lupe über die Seite fährst.</p>
 
-    <div class="scrollsign"></div></p>
+            <div class="scrollsign"></div>
     </div>
 </template>
 
 <style scoped>
-    .frontpage {
-        height: 100vh;
-        width: 100vw;
-        position: relative;
-        z-index: 300;
-        background-color: rgb(22, 10, 3);
-    }
-    .frontpage p {
-        font-size: clamp(1rem, 2vh, 2rem);
-        color: lemonchiffon;
-    }
-    .background {
+.frontpage {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 300;
+    background-color: rgb(22, 10, 3);
+}
+
+.background {
     background-color: black;
 }
 
@@ -48,7 +45,6 @@
 p {
 font-family: Arial, Helvetica, sans-serif;
 color: white;
-background-color: black;
 margin: -10% 20% -50% 52%;
 font-size: 20px;
 }
@@ -56,7 +52,8 @@ font-size: 20px;
 
 label.hamburg { 
    display: block;
-   background: black; width: 75px; height: 50px;
+   width: 75px; 
+   height: 50px;
    position: relative;
    margin-left: 93%;
    margin-top: -67px;

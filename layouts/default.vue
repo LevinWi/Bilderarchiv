@@ -1,6 +1,6 @@
 <template>
     <main @mousemove="handleMousemove">
-        <Nav/>
+        
         <nuxt/>
         <Footer/>
         <div id="mouseBall" class="pointer"></div>
