@@ -9,11 +9,13 @@
                 <span class="line"></span>
             </label>
         </div>
+        <div class="textwrapper">
+            <!-- <h1>Bildarchiv</h1> -->
 
-        <h1>Hello there!</h1>
-
-        <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
-            Suche die Bilder in dem du mit der Lupe über die Seite fährst.</p>
+            <p>Willkommen im Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
+            Entdecke die Bilder in dem du mit der Lupe über die Seite fährst.</p>
+        </div>
+        
 
         <div class="scrollsign"></div>
     </div>
@@ -33,24 +35,18 @@
     width: 6rem;
 }
 
-h1 {
-    font-family: 'Mrs Eaves XL', Times, serif;
-    color: #fff;
-    padding-top: 10vh;
-    padding-left: 55vw;
-    width: 100vw;
-    font-size: 9rem;
-    line-height: 1;
+.textwrapper{
+    position: relative;
+    top: 25vh;
+    left: 15vw;
+    width: 30vw;
 }
 
 p {
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 3rem);
     color: white;
-    top: 40vh;
-    left: 57vw;
-    width: 30vw;
-    font-size: 20px;
 }
 
 label.hamburg { 

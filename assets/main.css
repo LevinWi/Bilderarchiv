@@ -4,12 +4,18 @@ body {
 }
 
 h1 {
+    font-family: 'DM Serif Display', serif;
     font-size: clamp(1rem, 10vw, 10rem);
-    color: antiquewhite;
+    color: white;
+    line-height: 1;
 }
 
 h3 {
+    font-family: 'DM Serif Display', serif;
     font-size: clamp(.8rem, 6vw, 6rem);
+    color: white;
+    margin-bottom: 0.5vw;
+    line-height: 1;
 }
 
 a {
@@ -50,7 +56,8 @@ figure img {
 }
 
 .column1-text, .column2-text {
-    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 3rem);
     z-index: 300;
     pointer-events: none;
     position: absolute;
