@@ -10,6 +10,8 @@
             </label>
         </div>
 
+        <h1>Hello there!</h1>
+
         <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
             Suche die Bilder in dem du mit der Lupe über die Seite fährst.</p>
 
@@ -31,12 +33,22 @@
     width: 6rem;
 }
 
+h1 {
+    font-family: 'Mrs Eaves XL', Times, serif;
+    color: #fff;
+    padding-top: 10vh;
+    padding-left: 55vw;
+    width: 100vw;
+    font-size: 9rem;
+    line-height: 1;
+}
+
 p {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     top: 40vh;
-    left: 60vw;
+    left: 57vw;
     width: 30vw;
     font-size: 20px;
 }
