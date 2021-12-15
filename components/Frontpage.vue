@@ -2,12 +2,18 @@
     <div class="frontpage">
         <img class= "img" :src="`/pics/logo-stadtmuseum.svg`">
 
+
         <div class="row">
+            <!-- <input type="checkbox" @click="open" id="hamburg"> -->
             <input type="checkbox" id="hamburg">
             <label for="hamburg" class="hamburg">
                 <span class="line"></span>
                 <span class="line"></span>
             </label>
+            <div id="menu">
+                <nuxt-link to="/DSGVO">DSGVO</nuxt-link>
+                <nuxt-link to="/impressum">Impressum</nuxt-link>
+            </div>
         </div>
 
         <h1>Hello there!</h1>
@@ -19,7 +25,37 @@
     </div>
 </template>
 
+<script>
+export default {
+    methods: {
+        open() {
+            if (document.getElementById('menu').style.left == 80 + 'vw') {
+                document.getElementById('menu').style.left = 100 + "vw"
+            }
+            else{
+                document.getElementById('menu').style.left = 80 + "vw"
+            }
+        }
+    }
+}
+</script>
+
 <style scoped>
+#menu {
+    position: relative;
+    left: 100vw;
+    top: 10vh;
+    height: 90vh;
+    width: 20vw;
+    transition: left 1s ease;
+    background-color: darkblue;
+}
+
+.openMenu {
+    position: absolute;
+    top: 10vh;
+    left: 90vw;
+}
 
 .frontpage {
     height: 100vh;
@@ -69,12 +105,17 @@ input#hamburg {
 
 .line { 
    position: absolute; 
-   left:10px;
-   height: 1px; width: 50px; 
+   left: 10px;
+   height: 1px;
+   width: 50px; 
    background: #fff; border-radius: 1.5px;
    display: block; 
    transition: 0.3s; 
    transform-origin: center; 
+}
+
+.hamburg:hover .line {
+    height: 4px;
 }
 
 .line:nth-child(1) { 
