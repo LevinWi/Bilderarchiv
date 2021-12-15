@@ -72,15 +72,13 @@ export default {
 }
 
 .textwrapper{
-    position: relative;
-    top: 25vh;
-    left: 15vw;
+    position: absolute;
+    top: 35vh;
+    left: 20vw;
     width: 30vw;
 }
 
-p {
-    position: absolute;
-    font-family: 'DM Sans', sans-serif;
+p { 
     font-size: clamp(1rem, 1.5vw, 3rem);
     color: white;
 }
