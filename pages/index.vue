@@ -5,14 +5,15 @@
       <div class="grid-list">
         <div class="column1">
           <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
-            <img 
-              v-if="item.PhotoId%2==0"
-              @mouseover= "handleMouseEnter(`left_${PhotoId}`)"
-              @mouseleave="hoveredElement=null"
-              :src="item.Link" :alt="item.AltText">
-            <p class="image-text-c1" v-if="hoveredElement===`left_${PhotoId}`">
-              Titel: {{item.TextTitle}} <br> {{item.Description}}
-            </p>
+            <img  v-if="item.PhotoId%2==0" @mouseover= "handleMouseEnter(`left_${PhotoId}`)" @mouseleave="hoveredElement=null" :src="item.Link" :alt="item.AltText">
+            <div class="column1-text">
+              <h3 class="image-title-c1" v-if="hoveredElement===`left_${PhotoId}`">
+                {{item.TextTitle}}
+              </h3>
+              <p class="image-text-c1" v-if="hoveredElement===`left_${PhotoId}`">
+                {{item.Description}}
+              </p>
+            </div>
             
           </figure>
         </div>
@@ -20,9 +21,14 @@
         <div class="column2">
           <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
             <img v-if="item.PhotoId%2!=0" @mouseover= "handleMouseEnter(`right_${PhotoId}`)" @mouseleave="hoveredElement=null" :src="item.Link" :alt="item.AltText">
-            <p class="image-text-c2" v-if="hoveredElement===`right_${PhotoId}`">
-               Titel: {{item.TextTitle}} <br> {{item.Description}}
-            </p>
+            <div class="column2-text">
+              <h3 class="image-title-c2" v-if="hoveredElement===`right_${PhotoId}`">
+                {{item.TextTitle}}
+              </h3>
+              <p class="image-text-c2" v-if="hoveredElement===`right_${PhotoId}`">
+                {{item.Description}}
+              </p>
+            </div>
           </figure>
         </div>
 
@@ -42,9 +48,7 @@ export default {
   }, 
   async created() {
     const DBimages = await this.$axios.get('https://webex-groupc.azurewebsites.net/api/Photo')
-    
     this.images = DBimages.data
-    console.log(DBimages.data)
   },
   methods: {
     handleMouseEnter(index){

@@ -8,6 +8,10 @@ h1 {
     color: antiquewhite;
 }
 
+h3 {
+    font-size: clamp(.8rem, 6vw, 6rem);
+}
+
 a {
     cursor: none;
 }
@@ -16,13 +20,15 @@ a {
     display: flex;
     flex-direction: row;
 }
-.column1{
+
+.column1 {
     display: flex;
     width: 50%;
     flex-direction: column;
     align-items: flex-start;
 }
-.column2{
+
+.column2 {
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -41,10 +47,9 @@ figure img {
     max-width: auto;
     width: 100%;
     min-width: 100%;
-    filter: invert(1);
 }
 
-.image-text-c1, .image-text-c2{
+.column1-text, .column2-text {
     font-size: 1rem;
     z-index: 300;
     pointer-events: none;
@@ -53,12 +58,15 @@ figure img {
     width: 40vw;
 }
 
-.image-text-c1{
+.column1-text {
     top: 30%;
     left: 110%
 }
 
-.image-text-c2{
+.column2-text {
     top: 30%;
     left: -90%
 }
+
+
+
