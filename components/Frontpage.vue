@@ -23,7 +23,7 @@
     width: 100vw;
     position: relative;
     z-index: 300;
-    padding: 2rem 2rem 0 2rem;
+    background-color: black;
 }
 
 .img {
@@ -31,13 +31,10 @@
 }
 
 p {
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    top: 40vh;
-    left: 60vw;
-    width: 30vw;
-    font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+margin: -10% 20% -50% 52%;
+font-size: 1.22rem;
 }
 
 label.hamburg { 
