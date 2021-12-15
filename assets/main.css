@@ -12,7 +12,7 @@ h1 {
 
 h3 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(.8rem, 6vw, 6rem);
+    font-size: clamp(.8rem, 4vw, 6rem);
     color: white;
     margin-bottom: 0.5vw;
     line-height: 1;
@@ -54,10 +54,19 @@ figure img {
     width: 100%;
     min-width: 100%;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 .column1-text, .column2-text {
+    /* transition: opacity .5s; */
     font-family: 'DM Sans', sans-serif;
-    font-size: clamp(1rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     z-index: 300;
     pointer-events: none;
     position: absolute;
