@@ -7,12 +7,16 @@
           <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
             <img  v-if="item.PhotoId%2==0" @mouseover= "handleMouseEnter(`left_${PhotoId}`)" @mouseleave="hoveredElement=null" :src="item.Link" :alt="item.AltText">
             <div class="column1-text">
-              <h3 class="image-title-c1" v-if="hoveredElement===`left_${PhotoId}`">
-                {{item.TextTitle}}
-              </h3>
-              <p class="image-text-c1" v-if="hoveredElement===`left_${PhotoId}`">
-                {{item.Description}}
-              </p>
+              <transition name="fade">
+                <h3 class="image-title-c1" v-if="hoveredElement===`left_${PhotoId}`">
+                  {{item.TextTitle}}
+                </h3>
+              </transition>
+              <transition name="fade">
+                <p class="image-text-c1" v-if="hoveredElement===`left_${PhotoId}`">
+                  {{item.Description}}
+                </p>
+              </transition>
             </div>
             
           </figure>
@@ -22,12 +26,16 @@
           <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
             <img v-if="item.PhotoId%2!=0" @mouseover= "handleMouseEnter(`right_${PhotoId}`)" @mouseleave="hoveredElement=null" :src="item.Link" :alt="item.AltText">
             <div class="column2-text">
-              <h3 class="image-title-c2" v-if="hoveredElement===`right_${PhotoId}`">
-                {{item.TextTitle}}
-              </h3>
-              <p class="image-text-c2" v-if="hoveredElement===`right_${PhotoId}`">
-                {{item.Description}}
-              </p>
+              <transition name="fade">
+                <h3 class="image-title-c2" v-if="hoveredElement===`right_${PhotoId}`">
+                  {{item.TextTitle}}
+                </h3>
+              </transition>
+              <transition name="fade">
+                <p class="image-text-c2" v-if="hoveredElement===`right_${PhotoId}`">
+                  {{item.Description}}
+                </p>
+              </transition>
             </div>
           </figure>
         </div>
@@ -60,6 +68,16 @@ export default {
 </script>
 
 <style>
+  .fade-enter-active{
+    transition: opacity 3s;
+    transition-delay: 1s;
+  }
+  .fade-leave-active {
+    transition: opacity 1s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
   .BG-img {
     width: 80vw;
     position: absolute;
