@@ -58,7 +58,6 @@ export default {
     }
 
     .black {
-        /* background-color: rgba(0,0,0,0.5); */
         opacity: 0.9;
     }
 

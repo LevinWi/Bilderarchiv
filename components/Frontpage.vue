@@ -29,21 +29,54 @@
                 <a href="#"><li>Home</li></a>
                  <a href="#"><li>About</li></a>
                  <a href="#"><li>Info</li></a>
-                 <a href="#"><li>Contact</li></a>
-                 <a href="#" target="_blank"><li>Show me more</li></a>
+                 <nuxt-link to="/DSGVO">DSGVO</nuxt-link>
+                 <nuxt-link to="/impressum">Impressum</nuxt-link>
             </ul>
+
         </div>
+        <div class="textwrapper">
+            <!-- <h1>Bildarchiv</h1> -->
 
-        <h1>Hello there!</h1>
-
-        <p>Hallo wir sind das Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
-            Suche die Bilder in dem du mit der Lupe über die Seite fährst.</p>
+            <p>Willkommen im Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
+            Entdecke die Bilder in dem du mit der Lupe über die Seite fährst.</p>
+        </div>
+        
 
         <div class="scrollsign"></div>
     </div>
 </template>
 
+<script>
+export default {
+    methods: {
+        open() {
+            if (document.getElementById('menu').style.left == 80 + 'vw') {
+                document.getElementById('menu').style.left = 100 + "vw"
+            }
+            else{
+                document.getElementById('menu').style.left = 80 + "vw"
+            }
+        }
+    }
+}
+</script>
+
 <style scoped>
+#menu {
+    position: relative;
+    left: 100vw;
+    top: 10vh;
+    height: 90vh;
+    width: 20vw;
+    transition: left 1s ease;
+    background-color: darkblue;
+}
+
+.openMenu {
+    position: absolute;
+    top: 10vh;
+    left: 90vw;
+}
 
 .frontpage {
     height: 100vh;
@@ -58,24 +91,16 @@
     z-index: 6;
 }
 
-h1 {
-    font-family: 'Mrs Eaves XL', Times, serif;
-    color: #fff;
-    padding-top: 1vh;
-    padding-left: 55vw;
-    width: 100vw;
-    font-size: 9rem;
-    line-height: 1;
+.textwrapper{
+    position: absolute;
+    top: 35vh;
+    left: 20vw;
+    width: 30vw;
 }
 
-p {
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
+p { 
+    font-size: clamp(1rem, 1.5vw, 3rem);
     color: white;
-    top: 40vh;
-    left: 57vw;
-    width: 30vw;
-    font-size: 20px;
 }
 
 label.hamburg { 
@@ -234,13 +259,18 @@ input#hamburg {
 
 .line { 
    position: absolute; 
-   left:-50px;
-   height: 1px; width: 50px; 
+   left: 10px;
+   height: 1px;
+   width: 50px; 
    background: #fff; border-radius: 1.5px;
    display: block; 
    transition: 0.3s; 
    transform-origin: center; 
    z-index: 8;
+}
+
+.hamburg:hover .line {
+    height: 4px;
 }
 
 .line:nth-child(1) { 
