@@ -71,11 +71,9 @@ export default {
         pointer-events: none;
         z-index: 200;
         overflow: hidden;
+        transition: width .6s ease;
     }
 
-    a:hover>#cover{
-        transform: scale(1.2) ;
-    }
     ::-webkit-scrollbar {
         display: none;
     }

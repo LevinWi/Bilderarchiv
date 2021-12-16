@@ -1,6 +1,6 @@
 <template>
     <div class="frontpage">
-        <img class= "img" :src="`/pics/logo-stadtmuseum.svg`">
+        <img class= "img" @mouseenter="zoom" @mouseleave="shrink" :src="`/pics/logo-stadtmuseum.svg`">
 
         <div id="menuToggle" class="row">
 
@@ -35,8 +35,6 @@
 
         </div>
         <div class="textwrapper">
-            <!-- <h1>Bildarchiv</h1> -->
-
             <p>Willkommen im Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
             Entdecke die Bilder in dem du mit der Lupe über die Seite fährst.</p>
         </div>
@@ -49,16 +47,22 @@
 <script>
 export default {
     methods: {
-        open() {
-            /*
-            if (document.getElementById('menu').style.left == 80 + 'vw') {
-                document.getElementById('menu').style.left = 100 + "vw"
-            }
-            else{
-                document.getElementById('menu').style.left = 80 + "vw"
-            }
-            */
+        zoom() {
+            var cover = document.getElementById('cover')
+            cover.style.width = 500 + 'vw'
+        },
+        shrink() {
+            var cover = document.getElementById('cover');
+            cover.style.width = 300 + 'vw'
         }
+    //     open() {
+    //         if (document.getElementById('menu').style.left == 80 + 'vw') {
+    //             document.getElementById('menu').style.left = 100 + "vw"
+    //         }
+    //         else{
+    //             document.getElementById('menu').style.left = 80 + "vw"
+    //         }
+    //     }
     }
 }
 </script>
@@ -116,7 +120,7 @@ label.hamburg {
 }
 
 input#hamburg {
-    display:none
+    display: none
 }
 
 
@@ -272,7 +276,8 @@ input#hamburg {
    left: 10px;
    height: 1px;
    width: 50px; 
-   background: #fff; border-radius: 1.5px;
+   background: #fff; 
+   border-radius: 1.5px;
    display: block; 
    transition: 0.3s; 
    transform-origin: center; 
@@ -307,8 +312,38 @@ input#hamburg {
     position: absolute;
     top: 90vh;
     left: 50vw;
-    border-left: 1.5px solid white;
     height: 40px; 
-    width: 6px;
+    width: 0px;
+}
+
+.scrollsign::after { 
+    content: '';
+    width: 1px;
+    height: 0px;
+    display: block;
+    background: white;
+    animation: border-dance 2s infinite ease;
+}
+
+@keyframes border-dance {
+    0% {
+        height: 0px;
+    }
+
+    30% {
+        margin-top: 0;
+        height: 2rem;
+    }
+
+    50% {
+        margin-top: 2rem;
+        height: 0px;
+    }
+
+    100% {
+        margin-top: 2rem;
+        height: 0px;
+    }
+
 }
 </style>
