@@ -1,19 +1,16 @@
 <template>
     <div class="frontpage">
-        <img class= "img" @mouseenter="zoom" @mouseleave="shrink" :src="`/pics/logo-stadtmuseum.svg`">
+        <img class="img" @mouseenter="zoom" @mouseleave="shrink" :src="`/pics/logo-stadtmuseum.svg`">
 
         <div id="menuToggle" class="row">
 
-           <input type="checkbox" id="hamburg">
-            <label for="hamburg" class="hamburg">
+            <input type="checkbox" id="hamburg">
+            <label @mouseenter="zoom" @mouseleave="shrink" for="hamburg" class="hamburg">
                 <span class="line"></span>
                 <span class="line"></span>
             </label>
-            
-
-
            
- <!--<input type="checkbox" id="hamburg">
+<!--<input type="checkbox" id="hamburg">
     <label for="hamburg" class="hamburg">
         <span class="line"></span>
         <span class="line"></span>
@@ -36,7 +33,6 @@
             <p>Willkommen im Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
             Entdecke die Bilder in dem du mit der Lupe über die Seite fährst.</p>
         </div>
-        
 
         <div class="scrollsign"></div>
     </div>
@@ -47,7 +43,9 @@ export default {
     methods: {
         zoom() {
             var cover = document.getElementById('cover')
-            cover.style.width = 500 + 'vw'
+            console.log(cover.style.width)
+            cover.style.width = 400 + 'vw'
+            console.log(cover.style.width)
         },
         shrink() {
             var cover = document.getElementById('cover');
@@ -103,7 +101,6 @@ label.hamburg {
 input#hamburg {
     display: none
 }
-
 
 #menuToggle
 {

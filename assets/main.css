@@ -60,6 +60,7 @@ figure img {
     width: 100%;
     min-width: 100%;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
@@ -69,6 +70,7 @@ figure img {
 .fade-leave-to {
   opacity: 0;
 }
+
 .column1-text, .column2-text {
     /* transition: opacity .5s; */
     font-family: 'DM Sans', sans-serif;
@@ -89,6 +91,3 @@ figure img {
     top: 30%;
     left: -90%
 }
-
-
-
