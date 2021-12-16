@@ -41,8 +41,6 @@ export default {
 </script>
 
 <style>
-    @import url('https://fonts.adobe.com/fonts/mrs-eaves-xl#fonts-section');
-
     body {
         cursor: none;
         background: #111;
@@ -71,11 +69,9 @@ export default {
         pointer-events: none;
         z-index: 200;
         overflow: hidden;
+        transition: width .6s ease;
     }
 
-    a:hover>#cover{
-        transform: scale(1.2) ;
-    }
     ::-webkit-scrollbar {
         display: none;
     }
