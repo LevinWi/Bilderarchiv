@@ -84,9 +84,9 @@ export default {
         border-radius: 4px; 
         position: fixed;
         width: 10vw;
-        height: 10vw;
+        height: 5vw;
         top: 2vw;
-        right: 2vw;
+        right: 0;
     }
 
     #menuToggle input {
