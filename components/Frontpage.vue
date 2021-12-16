@@ -28,8 +28,8 @@
             <ul id="menu">
                 <a href="#"><li>Home</li></a>
                  <a href="#"><li>About</li></a>
-                 <a href="#"><li>Info</li></a>
-                 <nuxt-link class="nuxtlink" to="/DSGVO">DSGVO</nuxt-link>
+                 <a href="#"><li>Info</li></a><br>
+                 <nuxt-link class="nuxtlink" to="/DSGVO">DSGVO</nuxt-link><br><br>
                  <nuxt-link class="nuxtlink" to="/impressum">Impressum</nuxt-link>
             </ul>
 
@@ -141,7 +141,7 @@ input#hamburg {
 {
   display: block;
   width: 50px;
-  height: 32px;
+  height: 52px;
   position: absolute;
   top: -7px;
   left: 15px;
@@ -273,7 +273,7 @@ input#hamburg {
 
 .line { 
    position: absolute; 
-   left: 10px;
+   left: -30px;
    height: 1px;
    width: 50px; 
    background: #fff; 

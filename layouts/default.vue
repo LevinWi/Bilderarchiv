@@ -41,8 +41,6 @@ export default {
 </script>
 
 <style>
-    @import url('https://fonts.adobe.com/fonts/mrs-eaves-xl#fonts-section');
-
     body {
         cursor: none;
         background: #111;
