@@ -1,19 +1,16 @@
 <template>
     <div class="frontpage">
-        <img class= "img" @mouseenter="zoom" @mouseleave="shrink" :src="`/pics/logo-stadtmuseum.svg`">
+        <img class="img" @mouseenter="zoom" @mouseleave="shrink" :src="`/pics/logo-stadtmuseum.svg`">
 
         <div id="menuToggle" class="row">
 
-           <input type="checkbox" id="hamburg">
-            <label for="hamburg" class="hamburg">
+            <input type="checkbox" id="hamburg">
+            <label @mouseenter="zoom" @mouseleave="shrink" for="hamburg" class="hamburg">
                 <span class="line"></span>
                 <span class="line"></span>
             </label>
-            
-
-
            
- <!--<input type="checkbox" id="hamburg">
+<!--<input type="checkbox" id="hamburg">
     <label for="hamburg" class="hamburg">
         <span class="line"></span>
         <span class="line"></span>
@@ -26,10 +23,8 @@
         <span></span>-->
 
             <ul id="menu">
-                <a href="#"><li>Home</li></a>
-                 <a href="#"><li>About</li></a>
-                 <a href="#"><li>Info</li></a>
-                 <nuxt-link class="nuxtlink" to="/DSGVO">DSGVO</nuxt-link>
+                 <nuxt-link class="nuxtlink" to="/">Home</nuxt-link><br><br>
+                 <nuxt-link class="nuxtlink" to="/DSGVO">DSGVO</nuxt-link><br><br>
                  <nuxt-link class="nuxtlink" to="/impressum">Impressum</nuxt-link>
             </ul>
 
@@ -38,7 +33,6 @@
             <p>Willkommen im Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
             Entdecke die Bilder in dem du mit der Lupe über die Seite fährst.</p>
         </div>
-        
 
         <div class="scrollsign"></div>
     </div>
@@ -49,34 +43,19 @@ export default {
     methods: {
         zoom() {
             var cover = document.getElementById('cover')
-            cover.style.width = 500 + 'vw'
+            console.log(cover.style.width)
+            cover.style.width = 400 + 'vw'
+            console.log(cover.style.width)
         },
         shrink() {
             var cover = document.getElementById('cover');
             cover.style.width = 300 + 'vw'
         }
-    //     open() {
-    //         if (document.getElementById('menu').style.left == 80 + 'vw') {
-    //             document.getElementById('menu').style.left = 100 + "vw"
-    //         }
-    //         else{
-    //             document.getElementById('menu').style.left = 80 + "vw"
-    //         }
-    //     }
     }
 }
 </script>
 
 <style scoped>
-/*#menu {
-    position: relative;
-    left: 100vw;
-    top: 10vh;
-    height: 90vh;
-    width: 20vw;
-    transition: left 1s ease;
-    background-color: darkblue;
-}*/
 
 .openMenu {
     position: absolute;
@@ -123,7 +102,6 @@ input#hamburg {
     display: none
 }
 
-
 #menuToggle
 {
   display: block;
@@ -141,10 +119,10 @@ input#hamburg {
 {
   display: block;
   width: 50px;
-  height: 32px;
+  height: 52px;
   position: absolute;
-  top: -7px;
-  left: 15px;
+  top: 7px;
+  left: 20px;
   
   cursor: pointer;
   
@@ -154,70 +132,6 @@ input#hamburg {
   -webkit-touch-callout: none;
 }
 
-
-/*
- * Just a quick hamburger
- */
-/*#menuToggle span
-{
-  display: block;
-  width: 50px;
-  height: 3px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  box-shadow: 0px 2px 0px red;
-
-  border-radius: 1px;
-  
-  z-index: 1;
-  
-  transform-origin: center;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-/*#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  /*background: red;*/
-/*}
-
-/*
- * But let's hide the middle one.
- */
-/*#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}*/
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-/*#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  opacity: 1;
-  transform: rotate(-45deg) translate(1px, 10px);
-}*/
-
 /*
  * Make this absolute positioned
  * at the top left of the screen
@@ -226,9 +140,9 @@ input#hamburg {
 {
   position: absolute;
   height: calc(100vh + 120px);
-  width: 100vw;
+  width: 30vw;
   margin: -120px 0 0 0;
-  padding-top: 155px;
+  padding-top: 175px;
   right: -50px;
   
   background: rgba(0, 0, 0, 0.8);
@@ -245,18 +159,17 @@ input#hamburg {
 
 #menu li
 {
-  padding: 20px 0;
   font-size: 32px;
-  padding-left: 200px;
-  line-height: 22px;
+  padding-left: 50px;
+  line-height: 10px;
+  padding-bottom: 15px;
 }
 
 .nuxtlink
 {
-  padding: 20px 0;
   font-size: 32px;
-  padding-left: 200px;
-  line-height: 22px;
+  padding-left: 50px;
+  line-height: 12px;
 }
 
 /*
@@ -273,7 +186,7 @@ input#hamburg {
 
 .line { 
    position: absolute; 
-   left: 10px;
+   right: 4vw;
    height: 1px;
    width: 50px; 
    background: #fff; 
@@ -285,7 +198,7 @@ input#hamburg {
 }
 
 .hamburg:hover .line {
-    height: 4px;
+    height: 3px;
 }
 
 .line:nth-child(1) { 
