@@ -26,7 +26,7 @@
         <span></span>-->
 
             <ul id="menu">
-                <a href="#Home"><li>Home</li></a><br>
+                 <nuxt-link class="nuxtlink" to="/">Home</nuxt-link><br><br>
                  <nuxt-link class="nuxtlink" to="/DSGVO">DSGVO</nuxt-link><br><br>
                  <nuxt-link class="nuxtlink" to="/impressum">Impressum</nuxt-link>
             </ul>
