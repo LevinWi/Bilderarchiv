@@ -31,12 +31,14 @@
         max-width: 80vw;
         margin: 0 auto;
         padding: 6rem 0;
+        min-height: 100vh;
     }
 
     .impressumFlex{
         width: 80vw;
         display: flex;
         flex-direction: column;
+        margin-top: 8vh;
     }
 
     .impressumFlex h4{
