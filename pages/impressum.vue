@@ -15,7 +15,8 @@
             <p>   
                 levin.witjes@gmail.com
             </p>
-
+            <h4>Copyright Bilder</h4>
+            <p>Das Copyright der Bilder liegt beim Ringier Bildarchiv, Staatsarchiv Aargau.</p>
         </div>
     </div>
 </template>
