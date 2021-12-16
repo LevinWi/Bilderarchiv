@@ -29,8 +29,8 @@
                 <a href="#"><li>Home</li></a>
                  <a href="#"><li>About</li></a>
                  <a href="#"><li>Info</li></a>
-                 <nuxt-link to="/DSGVO">DSGVO</nuxt-link>
-                 <nuxt-link to="/impressum">Impressum</nuxt-link>
+                 <nuxt-link class="nuxtlink" to="/DSGVO">DSGVO</nuxt-link>
+                 <nuxt-link class="nuxtlink" to="/impressum">Impressum</nuxt-link>
             </ul>
 
         </div>
@@ -50,19 +50,21 @@
 export default {
     methods: {
         open() {
+            /*
             if (document.getElementById('menu').style.left == 80 + 'vw') {
                 document.getElementById('menu').style.left = 100 + "vw"
             }
             else{
                 document.getElementById('menu').style.left = 80 + "vw"
             }
+            */
         }
     }
 }
 </script>
 
 <style scoped>
-#menu {
+/*#menu {
     position: relative;
     left: 100vw;
     top: 10vh;
@@ -70,7 +72,7 @@ export default {
     width: 20vw;
     transition: left 1s ease;
     background-color: darkblue;
-}
+}*/
 
 .openMenu {
     position: absolute;
@@ -238,6 +240,14 @@ input#hamburg {
 }
 
 #menu li
+{
+  padding: 20px 0;
+  font-size: 32px;
+  padding-left: 200px;
+  line-height: 22px;
+}
+
+.nuxtlink
 {
   padding: 20px 0;
   font-size: 32px;
