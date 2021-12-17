@@ -7,14 +7,15 @@
                 Nicole Bänninger, Simon Gisler, Mike Brechbühl und Levin Witjes
             </p>
             <h4>Adresse</h4>
-            <p>
-                6020 Emmenbrücke <br>
-                Nylsuisseplatz 1
-            </p>
+            <p>6020 Emmenbrücke <br>
+                Nylsuisseplatz 1</p>
+
             <h4>Kontakt</h4>
-            <p>   
-                levin.witjes@gmail.com
-            </p>
+            <p>design-kunst@hslu.ch</p>
+
+            <h4>Telefon</h4>
+            <p>041 248 64 64</p>
+
             <h4>Copyright Bilder</h4>
             <p>Das Copyright der Bilder liegt beim Ringier Bildarchiv, Staatsarchiv Aargau.</p>
         </div>
