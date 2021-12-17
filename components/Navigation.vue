@@ -42,8 +42,8 @@ export default {
         width: 33vw;
         padding: 30vh 3vw;
         transition: left 1s ease;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-left: 0.1vw rgba(255, 255, 255, 0.1) solid;
+        background-color: rgba(8, 8, 8, 0.8);
+        border-left: 0.1vw solid rgba(42, 42, 42, 0.8);
     }
 
     #menu ul li {
