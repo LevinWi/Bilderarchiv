@@ -55,7 +55,7 @@ export default {
     }
   }, 
   async created() {
-    const DBimages = await this.$axios.get('https://webex-groupc.azurewebsites.net/api/Photo')
+    const DBimages = await this.$axios.get('../static/archive.json')
     this.images = DBimages.data
   },
   methods: {
