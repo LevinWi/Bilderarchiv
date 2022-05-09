@@ -55,6 +55,7 @@ export default {
     }
   }, 
   async created() {
+    console.log(../static/archive.json)
     const DBimages = await get('../static/archive.json')
     this.images = DBimages.data
   },
