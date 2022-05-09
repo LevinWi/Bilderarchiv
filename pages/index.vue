@@ -48,8 +48,6 @@
 
 
 export default {
-  console.log(../static/archive.json);
-  
   data() {
     return {
       title: 'my things',
@@ -59,7 +57,7 @@ export default {
     }
   }, 
   async created() {
-    const DBimages = await get('../static/archive.json')
+    const DBimages = await fetch('../static/archive.json')
     this.images = DBimages.data
   },
   methods: {
