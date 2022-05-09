@@ -15,9 +15,7 @@ export default {
     methods: {
         zoom() {
             var cover = document.getElementById('cover')
-            console.log(cover.style.width)
             cover.style.width = 400 + 'vw'
-            console.log(cover.style.width)
         },
         shrink() {
             var cover = document.getElementById('cover');
