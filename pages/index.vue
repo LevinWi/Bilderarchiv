@@ -45,7 +45,11 @@
 </template>
 
 <script>
+
+
 export default {
+  console.log(../static/archive.json);
+  
   data() {
     return {
       title: 'my things',
@@ -55,7 +59,6 @@ export default {
     }
   }, 
   async created() {
-    console.log(../static/archive.json)
     const DBimages = await get('../static/archive.json')
     this.images = DBimages.data
   },
