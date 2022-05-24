@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
       <Frontpage/>
-      <img class="BG-img" :src="`/pics/stadtmuseum_aarau.png`" alt="">
+      <img class="BG-img" :src="`/pics/stadtmuseum_aarau.png`" alt="Stadtmuseum">
       <div class="grid-list">
         <div class="column1">
           <figure v-for="item, PhotoId in images" :key="PhotoId" :class="item.size">
@@ -57,8 +57,11 @@ export default {
     }
   }, 
   async created() {
-    const DBimages = await fetch('../static/archive.json')
-    this.images = DBimages.data
+    fetch("./archive.json")
+    .then(response => {
+      return response.json();
+    })
+    .then(jsondata => this.images = jsondata);
   },
   methods: {
     handleMouseEnter(index){
@@ -72,7 +75,7 @@ export default {
 <style>
   .fade-enter-active{
     transition: opacity 3s;
-    transition-delay: 1s;
+    transition-delay: .5s;
   }
   .fade-leave-active {
     transition: opacity 1s;

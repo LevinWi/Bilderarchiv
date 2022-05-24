@@ -3,7 +3,7 @@
         <img id="logo" @mouseenter="zoom" @mouseleave="shrink" :src="`/pics/logo-stadtmuseum.svg`">
         <div class="textwrapper">
             <p>Willkommen im Stadtmuseum Aarau. Entdecke unsere neueste Ausstellung vor Ort oder bekomme einen kleinen Einblick auf dieser Webseite. <br> <br>
-            Entdecke die Bilder in dem du mit der Lupe über die Seite fährst.</p>
+            Entdecke die Bilder, indem du mit der Lupe über die Seite fährst.</p>
         </div>
 
         <div class="scrollsign"></div>
