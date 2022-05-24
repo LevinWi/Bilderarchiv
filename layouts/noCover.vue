@@ -25,4 +25,9 @@
     #menuToggle input {
         cursor: initial!important;
     }
+
+    ::-moz-selection {
+        background:darkred;
+        color: white;
+    }
 </style>

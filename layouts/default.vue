@@ -76,4 +76,8 @@ export default {
         display: none;
     }
 
+    ::-moz-selection {
+        background:darkred;
+        color: white;
+    }
 </style>
