@@ -52,7 +52,7 @@ export default {
     }
 
     #menu ul li a{
-        cursor: none;
+        cursor: pointer;
     }
 
     #menu ul li a::after {

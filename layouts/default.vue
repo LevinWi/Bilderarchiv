@@ -59,6 +59,18 @@ export default {
         opacity: 0.95;
     }
 
+    .navigation { 
+        cursor: pointer!important;
+    }
+
+    #menuToggle{
+        cursor: pointer!important;
+    }
+
+    #menu {
+        cursor: initial;
+    }
+
     #cover{
         position: absolute;
         transform: translate(-50%, -50%);
@@ -76,8 +88,14 @@ export default {
         display: none;
     }
 
+    ::selection {
+        background:darkred;
+        color: white;
+    }
+
     ::-moz-selection {
         background:darkred;
         color: white;
     }
+    
 </style>

@@ -19,11 +19,16 @@
     }
 
     .navigation { 
-        cursor: initial!important;
+        cursor: pointer!important;
     }
 
-    #menuToggle input {
-        cursor: initial!important;
+    #menuToggle{
+        cursor: pointer!important;
+    }
+
+    ::selection {
+        background:darkred;
+        color: white;
     }
 
     ::-moz-selection {
